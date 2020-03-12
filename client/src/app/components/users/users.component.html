@@ -1,0 +1,59 @@
+<div class="container">
+    <h1 class="title">Welcome to acedemic alerts</h1>
+    <h1 class="title">Registration</h1>
+    <div class="row">
+
+        <div class="card  blue-grey lighten-5">
+            <div class="card-content">
+                <!-- <form #userForm ="ngForm" (ngSubmit)="addUser(userForm)"> -->
+                <form #userForm="ngForm">
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="text" name="name" #name="ngModel" [(ngModel)]="userService.selectedUser.name" placeholder="Put your name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="text" name="lastname" #lastname="ngModel" [(ngModel)]="userService.selectedUser.lastname" placeholder="Put your lastname">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="text" name="email" #email="ngModel" [(ngModel)]="userService.selectedUser.email" placeholder="puts your email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="password" name="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" placeholder="Create a password">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="password" name="confirm_password" placeholder="Confirm the password">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="text" name="role" #role="ngModel" [(ngModel)]="userService.selectedUser.role" placeholder="Put your rol">
+                        </div>
+                    </div>
+
+                    <div class="card-action">
+                        <div class="row">
+
+                            <div class="input-field">
+
+                                <button class="btn left" [routerLink]="'/main/home'" (click)="addUser(userForm)">Save User</button>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
